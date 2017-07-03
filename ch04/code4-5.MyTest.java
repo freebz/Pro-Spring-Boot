@@ -1,7 +1,7 @@
 // 코드 4-5 MyTest 클래스
 
 import org.junit.Rule;
-import org.junit.Text;
+import org.junit.Test;
 import org.springframework.boot.test.OutputCapture;
 
 import static org.hamcrest.Matchers.*;
