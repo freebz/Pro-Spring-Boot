@@ -48,6 +48,7 @@
 		  <artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
+		<!-- REST HAL BROWSER -->
 		<dependency>
 		  <groupId>org.springframework.data</groupId>
 		  <artifactId>spring-data-rest-hal-browser</artifactId>

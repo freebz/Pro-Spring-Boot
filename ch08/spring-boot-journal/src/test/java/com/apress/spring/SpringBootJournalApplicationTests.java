@@ -1,4 +1,4 @@
-package name.com.apress.spring;
+package com.apress.spring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
