@@ -8,7 +8,7 @@
     <title>Spring Boot Journal</title>
     <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css"></link>
     <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap-glyphicons.css"></link>
-    <link rel="stylesheet" type="text/css" media="all" href="css/style.css"></link>
+    <link rel="stylesheet" type="text/css" media="all" href="css/styles.css"></link>
   </head>
 
   <body>
@@ -19,7 +19,7 @@
 	<div th:each="entry,status : ${journal}">
 	  <li th:attr="class=${status.odd}?'timeline-inverted':''">
 	    <div class="tl-circ"></div>
-	    <div class="timeline-pannel">
+	    <div class="timeline-panel">
 	      <div class="tl-heading">
 		<h4><span th:text="${entry.title}">제목</span></h4>
 		<p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>
