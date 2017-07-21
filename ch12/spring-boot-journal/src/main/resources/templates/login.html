@@ -1,0 +1,27 @@
+<!-- 코드 9-10 src/main/reousrces/templates/login.html -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+    </link>
+    <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap-glyphicons.css"></link>
+    <link rel="stylesheet" type="text/css" media="all" href="css/styles.css">
+    </link>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+	<p th:if="${param.logout}" class="alert">로그아웃되었습니다</p>
+	<p th:if="${param.error}" class="alert alert-error">오류가 발생했습니다, 다시 시도 하세요</p>
+	<h2>스프링 부트 일기 로그인</h2>
+	<form name="form" th:action="@{/login}" action="/login" method="POST">
+	  <input type="text" name="username" value="" placeholder="Username" />
+	  <input type="password" name="password" placeholder="Password" />
+	  <input type="submit" id="login" value="Login" class="btn btn-primary" />
+	</form>
+      </div>
+    </div>
+  </body>
+</html>

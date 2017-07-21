@@ -1,0 +1,49 @@
+<!-- 코드 12-13 pom.xml 중에서 -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://maven.apache.org/POM4.0.0
+			     http://maven/apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.apress.spring</groupId>
+  <artifactId>spring-boot-journal</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>war</packaging>
+
+  <!-- ... -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
+    <docker.image.prefix>springboot</docker.image.prefix>
+  </properties>
+
+  <!-- 의존체 선언 -->
+
+  <build>
+    <plugins>
+      <plugin>
+	<groupId>org.springframework.boot</gorupId>
+	<artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+      <plugin>
+	<groupId>com.spotify</groupId>
+	<artifactId>docker-maven-plugin</artifactId>
+	<version>0.4.1</version>
+	<configuration>
+	  <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+	  <dockerDirectory>src/main/resources/docker</dockerDirectory>
+	  <resources>
+	    <resource>
+	      <targetPath>/</targetPath>
+	      <directory>${project.build.directory}</directory>
+	      <include>${project.build.finalName}.war</include>
+	    </resource>
+	  </resources>
+	</configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

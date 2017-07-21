@@ -1,0 +1,24 @@
+// 코드 12-6 build.gradle 파일 일부
+
+// 윗부분 코드 생략...
+
+apply plugin: 'war'
+
+war {
+    baseName = 'spring-boot-journal'
+    version = '0.0.1-SNAPSHOT'
+}
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    providedRuntime
+}
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+    //...
+}

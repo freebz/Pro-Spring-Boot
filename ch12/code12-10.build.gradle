@@ -1,0 +1,9 @@
+// 코드 12-10 build.gradle
+
+...
+apply plugin: 'spring-boot'
+
+springBoot {
+    excutable = true
+}
+...
