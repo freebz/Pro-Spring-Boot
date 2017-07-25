@@ -1,0 +1,51 @@
+<!-- 코드 14-12 src/main/resources/templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"></meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <meta name="description" content=""></meta>
+    <meta name="author" content=""></meta>
+    <title>Spring Boot Calendar</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet"></link>
+    <link href="css/cover.css" rel="stylesheet"></link>
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+	<div class="cover-container">
+	  <div class="masthead clearfix">
+	    <div class="inner">
+	      <h3 class="masthead-brand">스프링 부트 캘린더</h3>
+	      <nav>
+		<ul class="nav masthead-nav">
+		  <li class="active"><a href="#">홈</a></li>
+		  <li><a th:href="${journal.contextPath}">열기</a></li>
+		  <li><a th:href="${journal.apiPath}">API</a></li>
+		  <li><a th:href="${journal.apiPath} + '/journal/search'">검색</a></li>
+		</ul>
+	      </nav>
+	    </div>
+	  </div>
+
+	  <div class="inner cover">
+	    <h1 class="cover-heading">스프링 부트 캘린더</h1>
+	    <p class="lead">이 자그마한 캘린더 애플리케이션을 보면서 스프링 부트의 자동 구성 기능의 강력함을 느껴보세요. 또, 이 애플리케이션을 통해 스프링 일기 웹UI에 전체 접근을 할 수 있습니다.</p>
+	    <p class="lead">
+	      <a th:href="${journal.contextPath}" class="btn btn-lg btn-default">일기</a>
+	    </p>
+	  </div>
+
+	  <div class="mastfoot">
+	    <div class="inner">
+	      <p>스프링 부트 캘린더, powered by <a href="http://projects.spring.io/spring-boot/">Spring Boot</a>.</p>
+	    </div>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>
